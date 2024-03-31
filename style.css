@@ -339,6 +339,13 @@ header{
     
 .hero-home{
     grid-template-columns: 1fr;
+    gap: 60px;
+}
+
+.hero-text{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .chart{
