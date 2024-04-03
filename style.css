@@ -9,7 +9,8 @@
     --grigio-scuro: #363636;
     --bianco: white;
 
-    --gradiente: linear-gradient(to right, var(--grigio-chiaro), var(--tiffany), var(--verde), var(--giallo))
+    --gradient: linear-gradient(to right, var(--grigio-chiaro), var(--tiffany), var(--verde), var(--giallo));
+    ---radial-gradient: radial-gradient(at top left, var(--grigio-chiaro), var(--tiffany), var(--verde), var(--giallo));
 }
 
 *, *::after, *::before{
@@ -25,6 +26,7 @@ body{
 html{
     font-family: var(--ff);
     font-size: clamp(7px, 1vw, 10px);
+    color: #363636;
     scroll-behavior: smooth;
  }
 
@@ -66,7 +68,7 @@ header{
     font-weight: 300;
     text-align: center;
     color: var(--bianco);
-    background-image: var(--gradiente);
+    background-image: var(--gradient);
     border-radius: 100vw;
 }
 
@@ -117,7 +119,7 @@ header{
         font-size: 2.1rem;
         text-align: center;
         color: var(--bianco);
-        background-image: var(--gradiente);
+        background-image: var(--gradient);
         border-radius: 100vw;
         z-index: 999;
     }
@@ -201,7 +203,7 @@ header{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: var(--gradiente);
+        background: var(--gradient);
         width: 0vw;
         height: 0vw;
         border-radius: 50%;
@@ -224,9 +226,7 @@ header{
     gap: 5vw;
     width: 90%;
     margin-inline: auto;
-    /* margin-block: 100px ; */
-    margin-top: 100px;
-    margin-bottom: 1000px;
+    margin-block: 100px 35px ;
 }
 
 .hero-text{
@@ -254,7 +254,7 @@ header{
         padding-inline: 1em;
         padding-block: .1em .15em;
         border-radius: 100vw;
-        background: var(--gradiente);
+        background: var(--gradient);
         color: var(--bianco);
         font-size: clamp(3rem, 2vw, 4rem);
         font-weight: 400;
@@ -269,6 +269,8 @@ header{
 
 .azz{ color: var(--tiffany);}
 
+
+/* GRAFICO */
 
 .chart{
     display: flex;
@@ -335,49 +337,262 @@ header{
     z-index: -2;
 }
 
-    @media (max-width: 800px) {
+@media (max-width: 800px) {
     
-.hero-home{
-    grid-template-columns: 1fr;
-    gap: 60px;
+    .hero-home{
+        grid-template-columns: 1fr;
+        gap: 60px;
+        margin-block: 70px 40px;
+    }
+
+    .hero-text{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            font-size: clamp(5rem, 5vw, 6rem);
+        }
+    }
+
+    .chart{
+        flex-direction: row;
+        height: fit-content;
+    }
+
+    .cerchio{
+        width: 20vw;
+        aspect-ratio: 1;
+        min-width: 40px;
+        min-height: 40px;
+        
+        p{
+            font-size: clamp(1.1rem ,3vw ,3rem);
+        }
+    }
+
+    .cerchio::after{
+        width: 21.4vw;
+        aspect-ratio: 1;
+        min-width: 50px;
+        min-height: 50px;
+    }
+
+    .linea{
+        width: 80%;
+        height: 5px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: var(--gradient);
+    }
+
 }
 
-.hero-text{
-    text-align: center;
+/* TESTIMONIAL SECTION */
+
+.testimonial-section{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    gap: 40px;
+    margin-bottom: 1000px;
 
-.chart{
-    flex-direction: row;
-    height: fit-content;
-}
-
-.cerchio{
-    width: 20vw;
-    aspect-ratio: 1;
-    min-width: 80px;
-    min-height: 80px;
-    
-    p{
-        font-size: clamp(1.5rem ,3vw ,3rem);
+    h2{ 
+        font-size: 4rem;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 }
 
-.cerchio::after{
-    width: 21.4vw;
-    aspect-ratio: 1;
-    min-width: 90px;
-    min-height: 90px;
+.testimonial-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    width: 100%;
+    height: 650px;
+    padding-block: 50px 40px;
+    background: var(--gradient);
+    overflow-y: hidden;
 }
 
-.linea{
-    width: 80%;
-    height: 5px;
-    left: 0;
+.testimonial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background-image: var(--gradiente);
+    transform: translateY(-55%);
+    max-width: 90%;
+    transition: top 2s ease-in-out;
+
 }
 
+
+.testimonial-display{
+    width: 50%;
+
+    img{
+        width: 100%;
+        border-radius: 3%;
+        max-width: 700px;
+    }
+}
+
+.portf-img-mobile{
+    display: none;
+}
+
+.testimonial-text{
+    width: 50%;
+
+    h3{
+        font-size: 5rem;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    p{
+        font-size: clamp(20px, 2vw, 25px);
+        font-weight: 300;
+    }
+}
+
+.testimonial-toggle{
+    display: flex;
+    gap: 15px;
+    z-index: 990;
+}
+
+
+
+.dot{
+    width: 20px;
+    aspect-ratio: 1;
+    border: 2px solid var(--grigio-scuro);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.trattoria-la-mura{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+    transition: top 850ms ease-in-out, opacity 200ms ease-in-out;
+
+}
+
+.caffe-epoca{
+    top: 1000px;
+    transition: top 850ms ease-in-out, opacity 200ms ease-in-out;
+
+}
+
+.sardina{ 
+    top: 1000px;
+    transition: top 850ms ease-in-out, opacity 200ms ease-in-out;
+}
+
+.section-testimonial-mobile,
+.testimonial-section-mobile-title{
+    display: none;
+}
+
+
+@media (max-width: 1000px) {
+    .testimonial-main{
+        max-width: 100%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 800px) {
+    .testimonial-section{
+        display: none;
+    }
+
+    .section-testimonial-mobile{
+        display: flex;
+        gap: 100px;
+        overflow-x: auto;
+        width: 100%;
+        margin-block: 20px 100px;
+        scroll-snap-align: x;
+        scroll-snap-type: mandatory;
+        scrollbar-width: 0;
+        background: var(---radial-gradient);
+        padding-block: 30px;
+    }
+
+    .section-testimonial-mobile::-webkit-scrollbar{
+        display: none;
+    }
+
+    .testimonial-section-mobile-title{
+        display: block;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        margin-inline: auto;
+        text-align: center;
+    }
+    .testimonial-mobile{
+        position: relative;
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        scroll-snap-align: center;
+
+        img{ 
+            width: 80%;
+            max-width: 80%;
+            height: 500px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 20px;
+            filter: blur(2px);
+        }
+
+    }
+
+    .portf-img-mobile{
+        display: block;
+    }
+
+    .testimonial-mobile::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        opacity: .6;
+        width: 80%;
+        height: 100%;
+        border-radius: 20px;
+        filter: blur(2px);
+        z-index: 1;
+    }
+
+
+    .text-portf{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        h3{ 
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+    }
 }
