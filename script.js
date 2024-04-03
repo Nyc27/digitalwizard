@@ -43,3 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+const testimonialMobile = document.querySelectorAll('.testimonial-mobile')
+
+testimonialMobile.forEach(card => {
+    card.addEventListener('click', function (){
+        
+        const portfText = this.querySelector('.text-portf');
+
+        card.classList.toggle('show-more');
+        portfText.classList.toggle('show-more')
+    })
+})
