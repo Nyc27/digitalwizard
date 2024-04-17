@@ -504,6 +504,23 @@ header{
     transition: top 850ms ease-in-out, opacity 200ms ease-in-out;
 }
 
+.cta-portf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 15px;
+    border: 2px solid var(--grigio-scuro);
+    width: max-content;
+    padding-inline: .5em;
+    padding-block: .1em .15em;
+    border-radius: 100vw;
+
+    img{width: 17px}
+}
+
 .section-testimonial-mobile,
 .testimonial-section-mobile-title,
 .show-more-line{
@@ -572,7 +589,7 @@ header{
 
     }
 
-    .portf-img-mobile{
+    .portf-img-tablet{
         display: block;
         width: 80%;
         max-width: 80%;
@@ -580,6 +597,10 @@ header{
         object-fit: cover;
         object-position: top;
         border-radius: 20px;
+    }
+
+    .portf-img-mobile{
+        display: none;
     }
 
     .testimonial-mobile.show-more::after{
@@ -637,14 +658,30 @@ header{
         font-size: 3rem;
         font-weight: 400;
         margin-top: 15px;
+        margin-inline: auto;
         border: 2px solid white;
         width: max-content;
-        margin-inline: auto;
         padding-inline: .5em;
         padding-block: .1em .15em;
         border-radius: 100vw;
-
+    
         img{width: 17px}
+    }
+}
+
+@media (max-width: 500px) {
+    .portf-img-mobile{
+        display: block;
+        width: 80%;
+        max-width: 80%;
+        height: 500px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 20px;
+    }
+
+    .portf-img-tablet{
+        display: none;
     }
 }
 
@@ -983,12 +1020,40 @@ header{
 
 /* CONTATTACI */
 
-.contact-title{
-    display: block;
-    font-size: 3.5rem;
-    margin-inline: auto;
-    text-align: center;
-    margin-bottom: 30px;
+.sezione-contattaci{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    h2{
+        display: block;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    h3{
+        display: block;
+        font-size: 2.6rem;
+        text-align: center;
+    }
+}
+
+.whatsapp-cta{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #24d366;
+    width: max-content;
+    padding: 1em;
+    color: white;
+    letter-spacing: 1.5px;
+    border-radius: 100vw;
+    margin-block: 10px;
+
+    img{
+        width:30px
+    }
 }
 
 .contattaci{
@@ -1062,6 +1127,12 @@ textarea:focus{
     padding: .1em .5em;
     border-radius: 100vw;
     cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    input, textarea{
+        font-size: clamp(9px, 3vw, 14px);
+    }
 }
 
 /* FOOTER */
