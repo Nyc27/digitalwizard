@@ -22,99 +22,64 @@
 
 <body>
 
-
   <header>
-
-    <nav class="desktop-nav">
-
-    <img src="img/logo-digital-wizard.svg" alt="" class="logo">
-
-      <ul class="desktop-nav-list">
-
-      <li class="attiva" aria-current="page"><a href="index.html">Home</a></li>
-
-      <li><a href="servizi.html">Servizi</a></li>
-
-      <li><a href="contatti.html">Contatti</a></li>
-
-      <li><a href="chi-siamo.html">Chi Siamo</a></li>
-
-    </ul>
-
-    <a href="#" class="cta-nav">Consulenza Gratuita</a>
-
-    </nav>
-
-
-    <div class="visible-mobile-nav">
-
-        <img src="img/logo-digital-wizard.svg" alt="" class="logo">
-
-        <button class="nav-toggle" aria-controls="mobile-nav">Menu
-
-        <button class="nav-toggle" aria-controls="mobile-nav"><img src="img/nav-switcher.svg" alt=""></button>
-
-      </div>
-
-    <nav class="mobile-nav">
-
-      <ul class="mobile-nav-list" id="mobile-nav-list">
-
-      <li class="attiva" aria-current="page"><a href="index.html">Home</a></li>
-
-      <li><a href="servizi.html">Servizi</a></li>
-
-      <li><a href="contatti.html">Contatti</a></li>
-
-      <li><a href="chi-siamo.html">Chi Siamo</a></li>
-
-      <a href="#" class="cta-nav-mobile">Consulenza Gratuita</a>
-
+    <nav>
+      <a href="" class="logo">
+        <p>Digital</p><p>Wizard</p>
+      </a>
+      <ul class="nav-ul">
+        <li><a href="">Chi Siamo</a></li>
+        <li><a href="">Servizi</a></li>
+        <li><a href="">Contattaci</a></li>
       </ul>
-
-  </nav>
-
-  <div class="overlay"></div>
-
+      <button class="nav-toggle">
+        <div class="row row-up"></div>
+        <div class="row"></div>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </nav>
   </header>
+
+
+  <!-- FIXED BACKGROUND -->
+
+  <div class="video-container">
+    <video class="hero-video" autoplay loop preload="auto" muted>
+      <source src="img/hero-digitalwizard.mp4" type="video/mp4">
+      Il tuo browser non supporta il tag video.
+    </video>
+  </div>
+
 
   <!-- HERO -->
 
-  <section class="hero-home">
-
-      <div class="hero-text">
-        <h1><span class="giallo">Digitalizza</span> la <span class="verde">tua</span> <span class="azz">impresa</span> locale</h1>
-        <h2><strong>Web Marketing</strong> per <strong>Imprese Locali</strong> che Vogliono Andare al <strong>Livello Successivo</strong></h2>
-        <a href="">Scopri di Più</a>
-      </div>
-
-      <div class="chart">
-
-          <div class="linea"></div>
-          <div class="cerchio">
-              <p class="giallo">1.</p>
-              <p>Passione</p>
-          </div>
-
-          <div class="cerchio">
-              <p class="verde">2.</p>
-              <p>Affidabilità</p>
-          </div>
-
-          <div class="cerchio">
-              <p class="azz">3.</p>
-              <p>Trasparenza</p>
-          </div>
-
-      </div>
-
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="change-word">Web Marketing</h1>
+      <h1>per imprese locali che mirano a potenziare la loro presenza online per avere un vantaggio competitivo</h1>
+      <a href="">Voglio una consulenza gratuita
+        <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
+        </svg></a>
+    </div>
+    <a href="#testimonial-section" class="arrow-down-desktop">
+      <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
+        </svg>
+    </a>
+    <a href="#section-testimonial-mobile" class="arrow-down-mobile">
+      <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
+        </svg>
+    </a>
   </section>
 
-  <!-- TESTIMONIANZE -->
 
-  <section class="testimonial-section">
+  <!-- TESTIMONIAL DESKTOP -->
 
-    <h2>Fidati dei Nostri Clienti</h2>
+  <section class="testimonial-section" id="testimonial-section">
+
+    <h2>Ascolta i Nostri Clienti</h2>
 
     <div class="testimonial-main">
 
@@ -130,7 +95,10 @@
           <p>" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda est officiis voluptate in vero aliquam corrupti facere ipsam recusandae! Praesentium? "</p>
           <div class="cta-portf">
             <a href="https://trattorialamura.it" target="_blank">Visita il Sito</a>
-            <img src="img/external-link-icon-dark.svg" alt="">
+            <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M214.999 337.5C181.5 353 162.5 319.5 173.499 298.5L414.498 57H307.499C281.999 57 270.497 10 307.497 0H486.997C507.997 4.5 512.069 14.6878 511.997 33.5V203C503.997 236.5 464.497 236.5 454.497 203V98L214.999 337.5Z" fill="#363636"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M204.5 57H85C38.0558 57 0 95.0558 0 142V427C0 473.944 38.0558 512 85 512H370C416.944 512 455 473.944 455 427V308C453.696 288.876 422.165 272.396 404.42 295.019C398.393 302.702 397.5 312.992 397.5 322.757V422.5C397.5 443 388.5 454.5 362 454.5L84.5 455C64 455 57 438.5 57 422.5V149.5C57 128 66 114.5 84.5 114.5H187.59C198.754 114.5 210.64 113.225 218.782 105.586C236.675 88.8015 228.184 63.2326 204.5 57Z" fill="#363636"/>
+              </svg>
           </div>
         </div>
 
@@ -147,7 +115,10 @@
           <p>" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda est officiis voluptate in vero aliquam corrupti facere ipsam recusandae! Praesentium? "</p>
           <div class="cta-portf">
             <a href="https://caffeepoca.it" target="_blank">Visita il Sito</a>
-            <img src="img/external-link-icon-dark.svg" alt="">
+            <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M214.999 337.5C181.5 353 162.5 319.5 173.499 298.5L414.498 57H307.499C281.999 57 270.497 10 307.497 0H486.997C507.997 4.5 512.069 14.6878 511.997 33.5V203C503.997 236.5 464.497 236.5 454.497 203V98L214.999 337.5Z" fill="#363636"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M204.5 57H85C38.0558 57 0 95.0558 0 142V427C0 473.944 38.0558 512 85 512H370C416.944 512 455 473.944 455 427V308C453.696 288.876 422.165 272.396 404.42 295.019C398.393 302.702 397.5 312.992 397.5 322.757V422.5C397.5 443 388.5 454.5 362 454.5L84.5 455C64 455 57 438.5 57 422.5V149.5C57 128 66 114.5 84.5 114.5H187.59C198.754 114.5 210.64 113.225 218.782 105.586C236.675 88.8015 228.184 63.2326 204.5 57Z" fill="#363636"/>
+              </svg>
           </div>
         </div>
 
@@ -164,100 +135,95 @@
           <p>" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda est officiis voluptate in vero aliquam corrupti facere ipsam recusandae! Praesentium? "</p>
           <div class="cta-portf">
             <a href="lasardina.it" target="_blank">Visita il Sito</a>
-            <img src="img/external-link-icon-dark.svg" alt="">
+            <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M214.999 337.5C181.5 353 162.5 319.5 173.499 298.5L414.498 57H307.499C281.999 57 270.497 10 307.497 0H486.997C507.997 4.5 512.069 14.6878 511.997 33.5V203C503.997 236.5 464.497 236.5 454.497 203V98L214.999 337.5Z" fill="#363636"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M204.5 57H85C38.0558 57 0 95.0558 0 142V427C0 473.944 38.0558 512 85 512H370C416.944 512 455 473.944 455 427V308C453.696 288.876 422.165 272.396 404.42 295.019C398.393 302.702 397.5 312.992 397.5 322.757V422.5C397.5 443 388.5 454.5 362 454.5L84.5 455C64 455 57 438.5 57 422.5V149.5C57 128 66 114.5 84.5 114.5H187.59C198.754 114.5 210.64 113.225 218.782 105.586C236.675 88.8015 228.184 63.2326 204.5 57Z" fill="#363636"/>
+              </svg>
           </div>
         </div>
-
       </div>
 
-
       <div class="testimonial-toggle">
-
         <div class="dot" data-testimonial="trattoria-la-mura"></div>
         <div class="dot" data-testimonial="caffe-epoca"></div>
         <div class="dot" data-testimonial="sardina"></div>
-
       </div>
-
-
     </div>
 
   </section>
 
-  <!-- TESTIMONIAL MOBILE -->
 
-  <h2 class="testimonial-section-mobile-title">Fidati dei Nostri Clienti</h2>
+
+  <!-- TESTIMONIAL MOBILE -->
+ <section class="container-test-mobile" id="section-testimonial-mobile">
+  <h2 class="testimonial-section-mobile-title">Ascolta i Nostri Clienti</h2>
 
   <div class="show-more-line">
     <h4>Mostra di Più</h4>
     <img src="img/tap-icon.svg" alt="" class="tap-icon">
   </div>
 
-  <section class="section-testimonial-mobile">
-
-    <div class="testimonial-mobile">
-
-      <img src="img/la-mura-mobile.jpg" alt="" class="portf-img-mobile">
-      <img src="img/trattoria-la-mura.png" alt="" class="portf-img-tablet">
-
-      <div class="text-portf">
-        <img src="img/logo-la-mura.png" alt="" class="portf-logo">
-        <h3>Trattoria La Mura</h3>
-        <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam accusamus in sequi ipsam reiciendis! "</p>
-        <div class="cta-portf">
-          <a href="#">Visita il Sito</a>
-          <img src="img/external-link-icon.svg" alt="">
+ 
+    <div class="section-testimonial-mobile" >
+      <div class="testimonial-mobile">
+        <img src="img/la-mura-mobile.jpg" alt="" class="portf-img-mobile">
+        <img src="img/trattoria-la-mura.png" alt="" class="portf-img-tablet">
+        <div class="text-portf">
+          <img src="img/logo-la-mura.png" alt="" class="portf-logo">
+          <h3>Trattoria La Mura</h3>
+          <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam accusamus in sequi ipsam reiciendis! "</p>
+          <div class="cta-portf">
+            <a href="#">Visita il Sito</a>
+            <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M214.999 337.5C181.5 353 162.5 319.5 173.499 298.5L414.498 57H307.499C281.999 57 270.497 10 307.497 0H486.997C507.997 4.5 512.069 14.6878 511.997 33.5V203C503.997 236.5 464.497 236.5 454.497 203V98L214.999 337.5Z" fill="#363636"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M204.5 57H85C38.0558 57 0 95.0558 0 142V427C0 473.944 38.0558 512 85 512H370C416.944 512 455 473.944 455 427V308C453.696 288.876 422.165 272.396 404.42 295.019C398.393 302.702 397.5 312.992 397.5 322.757V422.5C397.5 443 388.5 454.5 362 454.5L84.5 455C64 455 57 438.5 57 422.5V149.5C57 128 66 114.5 84.5 114.5H187.59C198.754 114.5 210.64 113.225 218.782 105.586C236.675 88.8015 228.184 63.2326 204.5 57Z" fill="#363636"/>
+              </svg>
+          </div>
         </div>
       </div>
-
-    </div>
-
-    <div class="testimonial-mobile">
-
-      <img src="img/caffe-epoca-mobile.jpg" alt="" class="portf-img-mobile">
-      <img src="img/caffeepoca.png" alt="" class="portf-img-tablet">
-
-      <div class="text-portf">
-        <img src="img/logo-la-mura.png" alt="" class="portf-logo">
-        <h3>Caffè Epoca</h3>
-        <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam accusamus in sequi ipsam reiciendis! "</p>
-        <div class="cta-portf">
-          <a href="#">Visita il Sito</a>
-          <img src="img/external-link-icon.svg" alt="">
+      <div class="testimonial-mobile">
+        <img src="img/caffe-epoca-mobile.jpg" alt="" class="portf-img-mobile">
+        <img src="img/caffeepoca.png" alt="" class="portf-img-tablet">
+        <div class="text-portf">
+          <img src="img/logo-la-mura.png" alt="" class="portf-logo">
+          <h3>Caffè Epoca</h3>
+          <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam accusamus in sequi ipsam reiciendis! "</p>
+          <div class="cta-portf">
+            <a href="#">Visita il Sito</a>
+            <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M214.999 337.5C181.5 353 162.5 319.5 173.499 298.5L414.498 57H307.499C281.999 57 270.497 10 307.497 0H486.997C507.997 4.5 512.069 14.6878 511.997 33.5V203C503.997 236.5 464.497 236.5 454.497 203V98L214.999 337.5Z" fill="#363636"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M204.5 57H85C38.0558 57 0 95.0558 0 142V427C0 473.944 38.0558 512 85 512H370C416.944 512 455 473.944 455 427V308C453.696 288.876 422.165 272.396 404.42 295.019C398.393 302.702 397.5 312.992 397.5 322.757V422.5C397.5 443 388.5 454.5 362 454.5L84.5 455C64 455 57 438.5 57 422.5V149.5C57 128 66 114.5 84.5 114.5H187.59C198.754 114.5 210.64 113.225 218.782 105.586C236.675 88.8015 228.184 63.2326 204.5 57Z" fill="#363636"/>
+              </svg>
+          </div>
         </div>
       </div>
-
-    </div>
-
-    <div class="testimonial-mobile">
-
-
-      <img src="img/sardina-mobile.jpg" alt="" class="portf-img-mobile">
-      <img src="img/sardina.png" alt="" class="portf-img-tablet">
-
-      <div class="text-portf">
-        <img src="img/logo-sardina.jpg" alt="" class="portf-logo">
-        <h3>Sardina La Botteghina di Mare</h3>
-        <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam accusamus in sequi ipsam reiciendis! "</p>
-        <div class="cta-portf">
-          <a href="#">Visita il Sito</a>
-          <img src="img/external-link-icon.svg" alt="">
+      <div class="testimonial-mobile">
+        <img src="img/sardina-mobile.jpg" alt="" class="portf-img-mobile">
+        <img src="img/sardina.png" alt="" class="portf-img-tablet">
+        <div class="text-portf">
+          <img src="img/logo-sardina.jpg" alt="" class="portf-logo">
+          <h3>Sardina La Botteghina di Mare</h3>
+          <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam accusamus in sequi ipsam reiciendis! "</p>
+          <div class="cta-portf">
+            <a href="#">Visita il Sito</a>
+            <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M214.999 337.5C181.5 353 162.5 319.5 173.499 298.5L414.498 57H307.499C281.999 57 270.497 10 307.497 0H486.997C507.997 4.5 512.069 14.6878 511.997 33.5V203C503.997 236.5 464.497 236.5 454.497 203V98L214.999 337.5Z" fill="#363636"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M204.5 57H85C38.0558 57 0 95.0558 0 142V427C0 473.944 38.0558 512 85 512H370C416.944 512 455 473.944 455 427V308C453.696 288.876 422.165 272.396 404.42 295.019C398.393 302.702 397.5 312.992 397.5 322.757V422.5C397.5 443 388.5 454.5 362 454.5L84.5 455C64 455 57 438.5 57 422.5V149.5C57 128 66 114.5 84.5 114.5H187.59C198.754 114.5 210.64 113.225 218.782 105.586C236.675 88.8015 228.184 63.2326 204.5 57Z" fill="#363636"/>
+              </svg>
+          </div>
         </div>
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- PK DIGITAL WIZARD -->
 
   <section class="pk-me-section">
     
     <div class="containing-block-title">
   
       <h2>Perchè Scegliere</h2>
-      <img src="img/logo-dw-grigio.svg" alt="" class="logo-dw-grigio">
+      <div class="logo-pk-me">
+        <p>Digital</p><p>Wizard</p>
+      </div>
   
     </div>
 
@@ -321,7 +287,7 @@
 
   </section>
 
-  <!-- SERIVIZI -->
+  <!-- SERVIZI -->
 
   <section class="servizi-section">
 
@@ -387,14 +353,12 @@
 
   </section>
 
-  <!-- CONTATTACI -->
-
-  <section class="sezione-contattaci">
+  <section class="sezione-contattaci" id="sezione-contattaci">
 
     <h2 class="contact-title">Contattaci!</h2>
 
-    <a href="whatsapp://send?phone=+393667308721" class="whatsapp-cta">
-      <p>Scrivimi su WhatsApp</p>
+    <a href="whatsapp://send?phone=+39 3667308721" class="whatsapp-cta">
+      <p>Scrivici su WhatsApp</p>
       <img src="img/whastapp-icon-bianca.svg" alt="">
     </a>
 
@@ -420,20 +384,36 @@
 
   </section>
 
+  <footer>
 
-  <!-- <footer>
+    <a href="" class="logo">
+      <p>Digital</p><p>Wizard</p>
+    </a>
 
-    <div class="privacy">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Cookie Policy</a>
+    <div class="footer-wrap">
+      <div class="privacy">
+        <h4>Privacy</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+  
+      <div class="social">
+        <h4>Seguici sui Social</h4>
+        <a href="#"><img src="img/instagram.png" alt=""></a>
+        <a href="#"><img src="img/Facebook.svg" alt=""></a>
+      </div>
+  
+      <div class="navigazione">
+        <h4>Naviga Sul Sito</h4>
+        <a href="">Contattaci</a>
+        <a href="">Chi Siamo</a>
+        <a href="">Servizi</a>
+      </div>
     </div>
 
-
-  </footer> -->
+  </footer>
 
   <script src="script.js"></script>
 
-
 </body>
 </html>
-
