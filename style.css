@@ -346,6 +346,8 @@
   @media screen and (max-width: 750px){
      
     .hero{
+
+      height: 100svh;
   
       .hero-content{
         h1{
@@ -418,6 +420,7 @@
     padding-block: 50px 40px;
     background: none;
     backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
     color: white;
     overflow-y: hidden;
   }
@@ -595,6 +598,7 @@
           scrollbar-width: 0;
           background: rgba(255, 255, 255, 0.3);
           backdrop-filter: blur(35px);
+          -webkit-backdrop-filter: blur(35px);
           padding-block: 30px;
           scroll-snap-type: x mandatory;
   
@@ -783,6 +787,7 @@
     margin-inline: auto;
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     color: var(--grigio-scuro);
     border-radius: 20px;
     border: 2px solid;
@@ -965,6 +970,7 @@
     padding-block: 50px 150px;
     background: rgba(54, 54, 54, 0.5);
     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     color: white;
     margin-bottom: 700px;
   
@@ -1189,7 +1195,7 @@
     cursor: pointer;
   }
   
-  @media (max-width: 480px) {
+  @media (max-width: 480px) {q
     input, textarea{
         font-size: clamp(9px, 3vw, 14px);
     }
