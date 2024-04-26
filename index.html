@@ -4,7 +4,7 @@
 
   <meta charset="UTF-8">
 
-  <title>Home</title>
+  <title>DigitalWizard</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,7 +24,7 @@
 
   <header>
     <nav>
-      <a href="" class="logo">
+      <a href="index.html" class="logo">
         <p>Digital</p><p>Wizard</p>
       </a>
       <ul class="nav-ul">
@@ -43,11 +43,14 @@
 
   <!-- FIXED BACKGROUND -->
 
-  <div class="video-container">
-    <video class="hero-video" autoplay loop muted>
-      <source src="img/bg-digitalwizard.mp4" type="video/mp4">
-      Il tuo browser non supporta il tag video.
+  <div class="bg-container">
+    <video class="hero-video" id="hero-video" autoplay loop muted>
+
     </video>
+
+    <div class="hero-image">
+
+    </div>
   </div>
 
 
@@ -57,17 +60,23 @@
     <div class="hero-content">
       <h1 class="change-word">Web Marketing</h1>
       <h1>per imprese locali che mirano a potenziare la loro presenza online per avere un vantaggio competitivo</h1>
-      <a href="">Voglio una consulenza gratuita
+      <a href="consulenza.html">Voglio una consulenza gratuita
         <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
         </svg></a>
     </div>
-    <a href="#testimonial-section" class="arrow-down-desktop">
+
+
+    <!-- BOTTONE PER IL TESTIMONIAL(CE NE SONO DUE PK LA SEZIONE TESTIMONIAL MOBILE HA UN ID DIVERSO) -->
+
+    <a href="#testimonial-section" class="to-testimonial">
       <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
         </svg>
     </a>
-    <a href="#section-testimonial-mobile" class="arrow-down-mobile">
+
+    <!-- BOTTONE MOBILE -->
+    <a href="#section-testimonial-mobile" class="to-testimonial-mobile">
       <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
         </svg>
@@ -159,21 +168,37 @@
   <h2 class="testimonial-section-mobile-title">Ascolta i Nostri Clienti</h2>
 
   <div class="show-more-line">
-    <h4>Mostra di Più</h4>
-    <img src="img/tap-icon.svg" alt="" class="tap-icon">
+    <div class="mostra-di-piu">
+      <h4>Mostra di Più</h4>
+      <svg width="591" height="480" viewBox="0 0 591 480" fill="none" xmlns="http://www.w3.org/2000/svg" class="tap-icon">
+        <path d="M68.4997 206C26.113 151.159 32.26 92.4885 75.7556 58.8704C119.251 25.2524 177.114 34.6595 219.5 89.5001" stroke="#363636" stroke-width="20" stroke-linecap="round"/>
+        <path d="M82.8798 195.457C49.8093 152.67 50.5107 96.7213 84.4465 70.4921C118.382 44.2629 172.702 57.6859 205.772 100.473" stroke="white" stroke-width="20" stroke-linecap="round"/>
+        <path d="M323.432 129.949C314.316 136.547 307.95 146.47 306.065 158.523C302.854 156.976 299.678 155.691 296.547 154.667C282.412 150.042 267.757 150.402 256.354 158.307C248.705 163.609 244.057 171.232 242.068 179.757L190.066 132.33L189.818 132.105L189.561 131.89C168.095 114.002 142.268 118.662 127.042 132.696C119.51 139.639 113.958 149.379 113.111 160.483C112.24 171.897 116.474 183.212 125.737 192.408L281.77 357.356L186.621 375.684L185.849 375.833L185.098 376.061C158.659 384.093 147.112 404.936 147.021 424.343C146.977 433.642 149.55 442.987 154.695 450.419C159.887 457.921 168.545 464.414 179.958 464.414H412.958C447.731 464.414 488.303 440.383 519.264 407.136C550.681 373.398 575.458 326.794 575.458 276.914C575.458 263.849 569.84 250.04 562.461 237.053C554.876 223.703 544.37 209.418 532.405 194.976C508.46 166.074 477.438 135.08 448.854 107.6L448.153 106.926L447.371 106.349C427.803 91.8926 404.638 90.524 387.376 100.153C378.068 105.346 371.04 113.506 367.619 123.364C352.079 118.782 335.876 120.941 323.432 129.949Z" fill="white" stroke="#363636" stroke-width="30"/>
+        </svg>
+    </div>
+
+    <h4>|</h4>
+
+    <div class="scorri">
+      <h4>Scorri</h4>
+
+      <svg width="30" height="30" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
+        </svg>
+      </div>
+
   </div>
 
- 
+
     <div class="section-testimonial-mobile" >
       <div class="testimonial-mobile">
-        <img src="img/la-mura-mobile.jpg" alt="" class="portf-img-mobile">
         <img src="img/trattoria-la-mura.png" alt="" class="portf-img-tablet">
         <div class="text-portf">
           <img src="img/logo-la-mura.png" alt="" class="portf-logo">
           <h3>Trattoria La Mura</h3>
           <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam accusamus in sequi ipsam reiciendis! "</p>
           <div class="cta-portf">
-            <a href="https://trattorialamura.it">Visita il Sito</a>
+            <a href="https://trattorialamura.it" target="_blank">Visita il Sito</a>
             <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M214.999 337.5C181.5 353 162.5 319.5 173.499 298.5L414.498 57H307.499C281.999 57 270.497 10 307.497 0H486.997C507.997 4.5 512.069 14.6878 511.997 33.5V203C503.997 236.5 464.497 236.5 454.497 203V98L214.999 337.5Z" fill="#363636"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M204.5 57H85C38.0558 57 0 95.0558 0 142V427C0 473.944 38.0558 512 85 512H370C416.944 512 455 473.944 455 427V308C453.696 288.876 422.165 272.396 404.42 295.019C398.393 302.702 397.5 312.992 397.5 322.757V422.5C397.5 443 388.5 454.5 362 454.5L84.5 455C64 455 57 438.5 57 422.5V149.5C57 128 66 114.5 84.5 114.5H187.59C198.754 114.5 210.64 113.225 218.782 105.586C236.675 88.8015 228.184 63.2326 204.5 57Z" fill="#363636"/>
@@ -182,14 +207,13 @@
         </div>
       </div>
       <div class="testimonial-mobile">
-        <img src="img/caffe-epoca-mobile.jpg" alt="" class="portf-img-mobile">
         <img src="img/caffeepoca.png" alt="" class="portf-img-tablet">
         <div class="text-portf">
-          <img src="img/logo-la-mura.png" alt="" class="portf-logo">
+          <img src="img/favicon-caffe-epoca.png" alt="" class="portf-logo">
           <h3>Caffè Epoca</h3>
           <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam accusamus in sequi ipsam reiciendis! "</p>
           <div class="cta-portf">
-            <a href="https://caffepoca.it">Visita il Sito</a>
+            <a href="https://caffeepoca.it" target="_blank">Visita il Sito</a>
             <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M214.999 337.5C181.5 353 162.5 319.5 173.499 298.5L414.498 57H307.499C281.999 57 270.497 10 307.497 0H486.997C507.997 4.5 512.069 14.6878 511.997 33.5V203C503.997 236.5 464.497 236.5 454.497 203V98L214.999 337.5Z" fill="#363636"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M204.5 57H85C38.0558 57 0 95.0558 0 142V427C0 473.944 38.0558 512 85 512H370C416.944 512 455 473.944 455 427V308C453.696 288.876 422.165 272.396 404.42 295.019C398.393 302.702 397.5 312.992 397.5 322.757V422.5C397.5 443 388.5 454.5 362 454.5L84.5 455C64 455 57 438.5 57 422.5V149.5C57 128 66 114.5 84.5 114.5H187.59C198.754 114.5 210.64 113.225 218.782 105.586C236.675 88.8015 228.184 63.2326 204.5 57Z" fill="#363636"/>
@@ -198,14 +222,13 @@
         </div>
       </div>
       <div class="testimonial-mobile">
-        <img src="img/sardina-mobile.jpg" alt="" class="portf-img-mobile">
         <img src="img/sardina.png" alt="" class="portf-img-tablet">
         <div class="text-portf">
           <img src="img/logo-sardina.jpg" alt="" class="portf-logo">
           <h3>Sardina La Botteghina di Mare</h3>
           <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nam accusamus in sequi ipsam reiciendis! "</p>
           <div class="cta-portf">
-            <a href="https://lasardina.it">Visita il Sito</a>
+            <a href="https://lasardina.it" target="_blank">Visita il Sito</a>
             <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M214.999 337.5C181.5 353 162.5 319.5 173.499 298.5L414.498 57H307.499C281.999 57 270.497 10 307.497 0H486.997C507.997 4.5 512.069 14.6878 511.997 33.5V203C503.997 236.5 464.497 236.5 454.497 203V98L214.999 337.5Z" fill="#363636"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M204.5 57H85C38.0558 57 0 95.0558 0 142V427C0 473.944 38.0558 512 85 512H370C416.944 512 455 473.944 455 427V308C453.696 288.876 422.165 272.396 404.42 295.019C398.393 302.702 397.5 312.992 397.5 322.757V422.5C397.5 443 388.5 454.5 362 454.5L84.5 455C64 455 57 438.5 57 422.5V149.5C57 128 66 114.5 84.5 114.5H187.59C198.754 114.5 210.64 113.225 218.782 105.586C236.675 88.8015 228.184 63.2326 204.5 57Z" fill="#363636"/>
@@ -217,18 +240,18 @@
   </section>
 
   <section class="pk-me-section">
-    
+
     <div class="containing-block-title">
-  
+
       <h2>Perchè Scegliere</h2>
       <div class="logo-pk-me">
         <p>Digital</p><p>Wizard</p>
       </div>
-  
+
     </div>
 
     <div class="pk-me">
-    
+
       <div class="card-pk-me">
 
       <div class="pk-me-text">
@@ -293,62 +316,152 @@
 
     <h2>Per digitalizzare la tua impresa hai bisogno di servizi digitali efficaci!</h2>
 
+
+    <!-- WEBSITE -->
     <div class="servizio">
 
       <div class="servizio-left">
-        <p>01</p>
+        <p class="n-servizio">01</p>
         <h3>WebSite Creation</h3>
         <p>Trasforma la tua visione in un sito web professionale che cattura l'attenzione dei clienti.</p>
+        <button class="show-more-service">Scopri i vantaggi
+          <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
+          </svg></button>
       </div>
 
       <div class="servizio-right">
 
-        <h4>Web Design</h4>
-        <h4>User Interface</h4>
-        <h4>User Experience</h4>
-        <h4>Mobile Friendly</h4>
-        <h4>Sviluppo</h4>
+        <div class="servizi-titles">
+          <h4 class="servizio-title" data-servizio="web-design">Web Design</h4>
+          <h4 class="servizio-title" data-servizio="ui">User Interface</h4>
+          <h4 class="servizio-title" data-servizio="ux">User Experience</h4>
+          <h4 class="servizio-title" data-servizio="mobile-friendly">Mobile Friendly</h4>
+          <h4 class="servizio-title" data-servizio="sviluppo">Sviluppo</h4>
+        </div>
+
+
+        <div class="parag-servizi">
+          <p class="servizio-p" id="web-design">Il web design è l'arte di creare siti web esteticamente accattivanti e funzionali. Con il nostro servizio di web design, trasformeremo la tua visione in un sito web coinvolgente e professionale. Utilizziamo le ultime tendenze di design per garantire che il tuo sito si distingua dalla concorrenza. Dal layout alla grafica, ogni dettaglio sarà curato per fornire un'esperienza utente straordinaria.</p>
+
+
+          <p class="servizio-p" id="ui">L'interfaccia utente (UI) è il punto di contatto tra il tuo pubblico e il tuo sito web. Con un'interfaccia intuitiva e ben progettata, i visitatori si sentiranno subito a loro agio nell'esplorare il tuo sito. Il nostro team si impegna a creare un'UI che metta in risalto i punti di forza del tuo brand e semplifichi l'interazione degli utenti con il sito.</p>
+
+
+          <p class="servizio-p" id="ux">L'esperienza utente (UX) è fondamentale per il successo di un sito web. Con la nostra attenzione al dettaglio e alla facilità d'uso, garantiamo che i tuoi visitatori vivano un'esperienza fluida e piacevole durante la navigazione. Dalla facilità di navigazione alla velocità di caricamento, ottimizziamo ogni aspetto per massimizzare il coinvolgimento e la soddisfazione degli utenti.</p>
+
+
+          <p class="servizio-p" id="mobile-friendly">Nel mondo sempre più mobile di oggi, è essenziale che il tuo sito sia ottimizzato per i dispositivi mobili. Con il nostro approccio al mobile design, assicuriamo che il tuo sito sia reattivo e adattabile a tutti i dispositivi, dai telefoni ai tablet. Ci assicuriamo che i tuoi visitatori possano accedere al tuo contenuto in modo fluido e senza problemi, ovunque si trovino.</p>
+
+
+          <p class="servizio-p" id="sviluppo">Lo sviluppo è il cuore pulsante di ogni sito web. Utilizziamo le ultime tecnologie e pratiche di sviluppo per creare siti web robusti e performanti. Dal codice all'implementazione, il nostro team di sviluppo si impegna a fornire soluzioni su misura che soddisfino le tue esigenze specifiche e superino le tue aspettative.</p>
+        </div>
+
+        <button class="show-less-service">
+          <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
+          <p>Torna Indietro</p>
+          </svg>
+        </button>
 
       </div>
-    
+
     </div>
 
+
+    <!-- ADV -->
     <div class="servizio">
 
       <div class="servizio-left">
-        <p>02</p>
+        <p class="n-servizio">02</p>
         <h3>Advertising</h3>
         <p>Acquisisci nuovi clienti grazie alla potenza della pubblicità online</p>
+        <button class="show-more-service">Scopri i vantaggi
+          <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
+          </svg></button>
       </div>
 
       <div class="servizio-right">
-        
-        <h4>Google Ads</h4>
-        <h4>Creazione Pagine di Atterraggio</h4>
-        <h4>Analisi dei Dati</h4>
-        <h4>Miglioramento delle Performance</h4>
+
+        <div class="servizi-titles">
+          <h4 class="servizio-title" data-servizio="google-ads">Google Ads</h4>
+          <h4 class="servizio-title" data-servizio="landing-page">Creazione Pagine di Atterraggio</h4>
+          <h4 class="servizio-title" data-servizio="analitycs">Analisi dei Dati</h4>
+          <h4 class="servizio-title" data-servizio="performance">Miglioramento delle Performance</h4>
+        </div>
+
+        <div class="parag-servizi">
+
+          <p class="servizio-p" id="google-ads">Google Ads è uno strumento potentissimo per promuovere il tuo business online e raggiungere potenziali clienti al momento giusto. Con la nostra esperienza e competenza, creeremo campagne pubblicitarie mirate che aumenteranno la visibilità del tuo marchio e porteranno risultati tangibili. Dalla ricerca di parole chiave all'ottimizzazione del budget, gestiremo ogni aspetto delle tue campagne per massimizzare il ROI.</p>
+
+
+          <p class="servizio-p" id="landing-page">Le pagine di atterraggio sono il punto di ingresso chiave per i visitatori del tuo sito web. Con la nostra attenzione al design e alla persuasione, creeremo pagine di atterraggio che cattureranno l'attenzione dei visitatori e li spingeranno all'azione desiderata. Dal copywriting al layout, ogni elemento sarà ottimizzato per massimizzare le conversioni e generare lead qualificati.</p>
+
+
+          <p class="servizio-p" id="analitycs">I dati sono il cuore pulsante di ogni strategia di marketing digitale. Con il nostro servizio di analisi dei dati, tracceremo e analizzeremo ogni interazione degli utenti con il tuo sito web e le tue campagne pubblicitarie. Utilizzando strumenti avanzati e competenze analitiche approfondite, identificheremo le opportunità di ottimizzazione e guideremo le tue decisioni strategiche basate sui dati.</p>
+
+
+          <p class="servizio-p" id="performance">Il miglioramento continuo è la chiave per il successo delle tue campagne pubblicitarie. Con il nostro servizio di ottimizzazione delle performance, analizziamo costantemente i dati e apportiamo aggiornamenti mirati per massimizzare il rendimento delle tue campagne. Dal targeting all'ottimizzazione delle offerte, ci assicuriamo che le tue campagne siano sempre allineate agli obiettivi di business.</p>
+        </div>
+
+        <button class="show-less-service">
+          <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
+          <p>Torna Indietro</p>
+          </svg>
+        </button>
 
       </div>
-    
+
     </div>
 
+
+    <!-- LOCAL SEO -->
     <div class="servizio">
 
       <div class="servizio-left">
-        <p>03</p>
+        <p class="n-servizio">03</p>
         <h3>Local Seo</h3>
         <p>Migliora la posizione della tua impresa su Google Maps e nei risultati di ricerca locali.</p>
+        <button class="show-more-service">Scopri i vantaggi
+          <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
+          </svg></button>
       </div>
 
       <div class="servizio-right">
-        
-        <h4>Creazione o Recupero Account GMB</h4>
-        <h4>Ottimizzazione</h4>
-        <h4>Strategia Recensioni</h4>
-        <h4>Controllo dei Dati in Siti Esterni</h4>
+
+        <div class="servizi-titles">
+          <h4 class="servizio-title" data-servizio="gbp">Creazione o Recupero Account GBP</h4>
+          <h4 class="servizio-title" data-servizio="ottimizzazione-gbp">Ottimizzazione</h4>
+          <h4 class="servizio-title" data-servizio="recensioni-gbp">Strategia Recensioni</h4>
+          <h4 class="servizio-title" data-servizio="controllo-gbp">Controllo dei Dati in Siti Esterni</h4>
+        </div>
+
+        <div class="parag-servizi">
+
+          <p class="servizio-p" id="gbp">Il miglioramento continuo è fondamentale per il successo online. Con il nostro approccio basato sui dati e sull'ottimizzazione costante, ottimizzeremo le performance del tuo sito web e delle tue campagne digitali. Attraverso test A/B, ottimizzazione del tasso di conversione e aggiornamenti regolari, garantiremo che il tuo business raggiunga e superi i suoi obiettivi di marketing.</p>
+
+
+          <p class="servizio-p" id="ottimizzazione-gbp">L'ottimizzazione per la ricerca locale è cruciale per essere trovati dai potenziali clienti nella tua area geografica. Con il nostro approccio all'ottimizzazione locale, ottimizziamo il tuo sito web e il profilo GBP per le ricerche locali pertinenti. Utilizziamo strategie avanzate per migliorare la tua visibilità online e attrarre clienti locali interessati ai tuoi prodotti o servizi.</p>
+
+
+          <p class="servizio-p" id="recensioni-gbp">Le recensioni online sono un elemento chiave nella decisione di acquisto dei consumatori. Con il nostro servizio di strategia recensioni, ti aiutiamo a gestire e incoraggiare recensioni positive da parte dei clienti soddisfatti. Utilizziamo strategie efficaci per aumentare il numero e la qualità delle recensioni, migliorando la tua reputazione online e la fiducia dei potenziali clienti.p>
+
+
+          <p class="servizio-p" id="controllo-gbp">Il controllo accurato dei dati in siti esterni è fondamentale per garantire la coerenza delle informazioni sulla tua attività online. Con il nostro servizio di controllo dei dati in siti esterni, monitoriamo e gestiamo le informazioni sulla tua attività su piattaforme esterne come directory locali e social media. Manteniamo i tuoi dati aggiornati e accurati ovunque online, migliorando la tua visibilità e l'affidabilità del tuo brand.</p>
+        </div>
+
+        <button class="show-less-service">
+          <svg width="943" height="632" viewBox="0 0 943 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M49.9959 366.5C-17.9977 366.5 -14.4999 265 49.9959 265L760.996 263.5L581 84C540.5 45.5 614 -27 656 12L930.5 283.5C949 310.5 944.5 329.5 930.5 345.5L649.996 622C615.5 656 539 590.5 579.5 551L760.996 366.5H49.9959Z" fill="white"/>
+          <p>Torna Indietro</p>
+          </svg>
+        </button>
 
       </div>
-    
+
     </div>
 
   </section>
@@ -357,28 +470,34 @@
 
     <h2 class="contact-title">Contattaci!</h2>
 
-    <a href="whatsapp://send?phone=+39 3667308721" class="whatsapp-cta">
+    <a href="whatsapp://send?phone=+393667308721" class="whatsapp-cta">
       <p>Scrivici su WhatsApp</p>
-      <img src="img/whastapp-icon-bianca.svg" alt="">
+      <svg width="823" height="830" viewBox="0 0 823 830" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.5527 829L232.553 782C296.752 806.313 334.334 818.72 424.553 823C637.053 823 822.553 632.5 822.553 411C822.553 157 608.553 0 424.553 0C93.5532 0 -96.9468 333.5 50.5528 608L14.5527 822C13.2962 829.361 15.0021 831.317 24.5527 829ZM424.553 72C235.053 59 19.0532 240.5 83.5532 498.5C93.9417 534.102 108.194 566.144 125.8 594.5L98.5532 741.5L243.878 707.5C296.356 736.544 357.751 751.5 424.553 751.5C616.553 739 750.553 588.5 750.553 411C745.053 219.5 614.052 85 424.553 72Z" fill="white"/>
+        <path d="M304.553 219.5C299.545 210.929 281.572 213.645 260.053 213C232.053 222.5 202.053 271 202.053 315C204.053 366 241.322 430.27 303.053 498.5C355.553 563.5 459.553 607.5 523.053 610.5C532.053 610.5 619.553 600.5 615.553 516C615.759 512.36 614.829 511.466 613.053 510C594.081 498.462 544.336 471.532 520.553 462.5C515.313 461.246 512.628 461.107 508.553 462.5L463.553 513C458.839 513.803 456.046 513.909 450.553 513C378.053 478.5 343.053 441 307.553 379.5C306.747 375.958 306.848 373.991 307.553 370.5C314.553 363.5 337.553 340 343.553 325C344.439 321.039 344.281 318.858 343.553 315C328.747 277.597 325.048 255.495 304.553 219.5Z" fill="white"/>
+        </svg>
     </a>
 
     <h3>Oppure Compila il Form:</h3>
 
-    <form class="contattaci">
+    <form class="contattaci" action="process_form.php" method="POST">
       <div class="nome-email">
-        <div class="nome">
-          <label for="name">Nome *</label>
-          <input type="text" name="name" required placeholder="Inserisci il tuo nome">
+        <div class="nome field">
+          <label for="nome">Nome *</label>
+          <input type="text" id="nome" name="name" required placeholder="Inserisci il tuo nome">
         </div>
-        <div class="email">
+        <div class="email field">
           <label for="email">Email *</label>
-          <input type="email" name="email" required placeholder="Inserisci la tua email">
+          <input type="email" id="email" name="email" required placeholder="Inserisci la tua email">
         </div>
       </div>
-      <div class="message">
+      <div class="message field">
         <label for="message">Inserisci la tua richiesta *</label>
-        <textarea name="message" placeholder="Inserisci la tua richiesta"></textarea>
+        <textarea name="message" id="message" required placeholder="Inserisci la tua richiesta"></textarea>
       </div>
+
+      <input type="hidden" name="form_type" value="form-home">
+
       <button type="submit" class="cta-form">Contattaci Ora</button>
     </form>
 
@@ -396,13 +515,13 @@
         <a href="#">Privacy Policy</a>
         <a href="#">Cookie Policy</a>
       </div>
-  
+
       <div class="social">
         <h4>Seguici sui Social</h4>
         <a href="#"><img src="img/instagram.png" alt=""></a>
         <a href="#"><img src="img/Facebook.svg" alt=""></a>
       </div>
-  
+
       <div class="navigazione">
         <h4>Naviga Sul Sito</h4>
         <a href="">Contattaci</a>
@@ -417,4 +536,3 @@
 
 </body>
 </html>
-
